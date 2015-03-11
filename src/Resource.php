@@ -4,6 +4,11 @@ namespace Givey;
 
 use Givey\Adapter;
 
+/**
+ * Class Resource
+ *
+ * @package Givey
+ */
 abstract class Resource implements ResourceInterface
 {
     /**

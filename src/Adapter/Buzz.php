@@ -4,8 +4,20 @@ namespace Givey\Adapter;
 
 use Givey\Adapter;
 
+/**
+ * Class Buzz
+ *
+ * @package Givey\Adapter
+ */
 class Buzz extends Adapter
 {
+    /**
+     * @param       $url
+     * @param array $query
+     *
+     * @return mixed
+     * @throws \Exception
+     */
     public function get($url, array $query = array())
     {
         $query['access_token'] = $this->token;

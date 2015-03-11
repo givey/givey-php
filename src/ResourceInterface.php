@@ -2,6 +2,11 @@
 
 namespace Givey;
 
+/**
+ * Interface ResourceInterface
+ *
+ * @package Givey
+ */
 interface ResourceInterface
 {
     /**

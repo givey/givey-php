@@ -2,6 +2,11 @@
 
 namespace Givey;
 
+/**
+ * Class Adapter
+ *
+ * @package Givey
+ */
 abstract class Adapter
 {
     /**

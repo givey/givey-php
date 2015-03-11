@@ -4,8 +4,19 @@ namespace Givey;
 
 use Givey\Entity\Charity as CharityEntity;
 
+/**
+ * Class Charity
+ *
+ * @package Givey
+ */
 class Charity extends Resource
 {
+    /**
+     * @param $id
+     *
+     * @return \Givey\Entity\Charity
+     * @throws \Exception
+     */
     public static function retrieve($id)
     {
         $response = static::adapter()->get(sprintf('/charities/%s', $id));
@@ -13,6 +24,12 @@ class Charity extends Resource
         return new CharityEntity($response['charity']);
     }
 
+    /**
+     * @param array $params
+     *
+     * @return array
+     * @throws \Exception
+     */
     public static function all(array $params = array())
     {
         $response = static::adapter()->get('/charities', $params);

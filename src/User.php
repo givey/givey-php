@@ -4,8 +4,19 @@ namespace Givey;
 
 use Givey\Entity\User as UserEntity;
 
+/**
+ * Class User
+ *
+ * @package Givey
+ */
 class User extends Resource
 {
+    /**
+     * @param $id
+     *
+     * @return \Givey\Entity\User
+     * @throws \Exception
+     */
     public static function retrieve($id)
     {
         $response = static::adapter()->get(sprintf('/users/%s', $id));
@@ -13,6 +24,12 @@ class User extends Resource
         return new UserEntity($response['user']);
     }
 
+    /**
+     * @param array $params
+     *
+     * @return array
+     * @throws \Exception
+     */
     public static function all(array $params = array())
     {
         $response = static::adapter()->get('/users', $params);
