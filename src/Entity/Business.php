@@ -34,4 +34,16 @@ class Business extends Entity
             }
         }
     }
+
+    /**
+     * Return array of Employees
+     *
+     * @return array
+     */
+    public function employees()
+    {
+        return User::all(array(
+          'business_id' => $this->id
+        ));
+    }
 }
