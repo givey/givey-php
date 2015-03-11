@@ -9,7 +9,7 @@ use Givey\User;
 use Givey\Business;
 use Givey\Charity;
 
-Resource::setAdapter(new Buzz('Ghdw5zvtL9hi4pnEAOGamJ1nWw6n6HHQLtWmjVHC'));
+Resource::setAdapter(new Buzz($token));
 
 $user = User::retrieve('scott'); // Givey\Entity\User
 $business = Business::retrieve('giveybiz'); // Givey\Entity\Business
