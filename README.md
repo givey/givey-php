@@ -23,15 +23,16 @@ use Givey\Resource;
 Resource::setAdapter(new Buzz($token));
 ```
 
-### Loading a User
+### Loading Users
 
 ``` php
 use Givey\User;
 
 User::retrieve('scott'); // Givey\Entity\User
+User::all(array('business_id' => 100); // array(Givey\Entity\User, Givey\Entity\User)
 ```
 
-### Loading a Business
+### Loading Businesses
 
 ``` php
 use Givey\Business;
@@ -39,10 +40,11 @@ use Givey\Business;
 Business::retrieve('giveybiz'); // Givey\Entity\Business
 ```
 
-### Loading a Charity
+### Loading Charities
 
 ``` php
 use Givey\Charity;
 
 Charity::retrieve('dogstrust'); // Givey\Entity\Charity
+Charity::all(array('business_id' => 100); // array(Givey\Entity\Charity, Givey\Entity\Charity)
 ```
