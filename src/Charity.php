@@ -15,6 +15,13 @@ class Charity extends Resource
 
     public static function all(array $params = array())
     {
-        throw new \Exception('Not yet implemented');
+        $response = static::adapter()->get('/charities', $params);
+
+        $charities = array();
+        foreach ($response['charities'] as $charity) {
+            $charities[] = new CharityEntity($charity);
+        }
+
+        return $charities;
     }
 }
