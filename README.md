@@ -37,7 +37,8 @@ User::all(array('business_id' => 100); // array(Givey\Entity\User, Givey\Entity\
 ``` php
 use Givey\Business;
 
-Business::retrieve('giveybiz'); // Givey\Entity\Business
+$business = Business::retrieve('giveybiz'); // Givey\Entity\Business
+$business->employees(); // array(Givey\Entity\User, Givey\Entity\User)
 ```
 
 ### Charities
