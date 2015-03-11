@@ -23,9 +23,11 @@ abstract class Adapter
     }
 
     /**
-     * @param $url
+     * @param       $url
+     *
+     * @param array $params
      *
      * @return mixed
      */
-    abstract public function get($url);
+    abstract public function get($url, array $params = array());
 }

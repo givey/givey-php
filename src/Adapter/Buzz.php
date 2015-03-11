@@ -6,10 +6,13 @@ use Givey\Adapter;
 
 class Buzz extends Adapter
 {
-    public function get($url)
+    public function get($url, array $query = array())
     {
+        $query['access_token'] = $this->token;
+        $query_string = http_build_query($query);
+
         $browser = new \Buzz\Browser();
-        $response = $browser->get(sprintf('%s%s?access_token=%s', $this->api, $url, $this->token));
+        $response = $browser->get(sprintf('%s%s?%s', $this->api, $url, $query_string));
 
         if ( ! $response->isSuccessful()) {
             throw new \Exception('Unsuccessful');
