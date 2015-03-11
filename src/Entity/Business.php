@@ -3,7 +3,6 @@
 namespace Givey\Entity;
 
 use Givey\Entity;
-use Givey\User;
 
 /**
  * Class Business
@@ -98,7 +97,7 @@ class Business extends Entity
      */
     public function employees()
     {
-        return User::all(array(
+        return \Givey\User::all(array(
           'business_id' => $this->id
         ));
     }
