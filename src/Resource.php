@@ -19,7 +19,7 @@ abstract class Resource implements ResourceInterface
     /**
      * @param Adapter $adapter
      */
-    public static function setAdapter(Adapter $adapter)
+    public static function setAdapter(Adapter $adapter = null)
     {
         self::$adapter = $adapter;
     }
