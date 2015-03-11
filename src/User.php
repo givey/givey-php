@@ -15,6 +15,13 @@ class User extends Resource
 
     public static function all(array $params = array())
     {
-        throw new \Exception('Not yet implemented');
+        $response = static::adapter()->get('/users', $params);
+
+        $users = array();
+        foreach ($response['users'] as $user) {
+            $users[] = new UserEntity($user);
+        }
+
+        return $users;
     }
 }
