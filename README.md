@@ -23,7 +23,7 @@ use Givey\Resource;
 Resource::setAdapter(new Buzz($token));
 ```
 
-### Loading Users
+### Users
 
 ``` php
 use Givey\User;
@@ -32,7 +32,7 @@ User::retrieve('scott'); // Givey\Entity\User
 User::all(array('business_id' => 100); // array(Givey\Entity\User, Givey\Entity\User)
 ```
 
-### Loading Businesses
+### Businesses
 
 ``` php
 use Givey\Business;
@@ -40,7 +40,7 @@ use Givey\Business;
 Business::retrieve('giveybiz'); // Givey\Entity\Business
 ```
 
-### Loading Charities
+### Charities
 
 ``` php
 use Givey\Charity;
