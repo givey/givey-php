@@ -15,6 +15,15 @@ class BusinessTest extends AbstractTestCase
         $this->assertSame(100, $business->id);
     }
 
+    /**
+     * @expectedException Exception
+     * @expectedExceptionMessage Not yet implemented
+     */
+    public function test_all_not_implemented()
+    {
+        Givey\Business::all();
+    }
+
     public function test_employees_returns_array_of_users()
     {
         $this->adapter->shouldReceive('get')->with('/businesses/giveyltd')->once()->andReturn(array(
