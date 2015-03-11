@@ -1,5 +1,8 @@
 {
   "name": "givey/givey",
+  "description": "PHP library for https://api.givey.com",
+  "homepage": "https://github.com/givey/givey-php",
+  "type": "library",
   "autoload" : {
     "psr-4" : {
       "Givey\\": "src/"
