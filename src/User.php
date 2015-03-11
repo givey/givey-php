@@ -3,7 +3,6 @@
 namespace Givey;
 
 use Givey\Entity\User as UserEntity;
-use Mockery\CountValidator\Exception;
 
 /**
  * Class User
