@@ -1,4 +1,5 @@
 {
+  "name": "givey/givey",
   "autoload" : {
     "psr-4" : {
       "Givey\\": "src/"
