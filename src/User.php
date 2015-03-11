@@ -3,6 +3,7 @@
 namespace Givey;
 
 use Givey\Entity\User as UserEntity;
+use Mockery\CountValidator\Exception;
 
 /**
  * Class User
@@ -32,6 +33,11 @@ class User extends Resource
      */
     public static function all(array $params = array())
     {
+        if (count($params) == 0)
+        {
+            throw new \Exception('At least one filter is required');
+        }
+
         $response = static::adapter()->get('/users', $params);
 
         $users = array();
