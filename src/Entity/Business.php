@@ -93,12 +93,12 @@ class Business extends Entity
     /**
      * Return array of Employees
      *
+     * @param array $params
      * @return array
      */
-    public function employees()
+    public function employees(array $params = array())
     {
-        return \Givey\User::all(array(
-          'business_id' => $this->id
-        ));
+        $params['business_id'] = $this->id;
+        return \Givey\User::all($params);
     }
 }
