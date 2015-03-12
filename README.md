@@ -2,6 +2,8 @@
 
 This is a preview release so please use at your own risk and report any issues you may experience. Contact [Givey Support](https://www.givey.com/support) if you have any questions.
 
+[![Build Status](https://travis-ci.org/givey/givey-php.svg?branch=master)](https://travis-ci.org/givey/givey-php)i
+
 ## Usage
 
 ### Install
